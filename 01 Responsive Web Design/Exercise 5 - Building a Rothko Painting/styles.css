@@ -39,4 +39,5 @@
     background-color: #b20403;
     margin: auto;
     filter:blur(2px);
+    box-shadow: 0 0 5px 5px #b20403;
 }
