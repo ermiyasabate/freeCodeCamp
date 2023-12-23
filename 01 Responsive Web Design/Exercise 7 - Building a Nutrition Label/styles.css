@@ -7,7 +7,7 @@ html {
 }
 
 body {
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .label {
@@ -20,7 +20,7 @@ body {
 header h1 {
     text-align: center;
     margin: -4px 0;
-    letter-spacing: 0.15px;
+    letter-spacing: 0.15px
 }
 
 p {
@@ -42,7 +42,8 @@ p {
     height: 10px;
 }
 
-.large, .medium {
+.large,
+.medium {
     background-color: black;
     border: 0;
 }
@@ -54,6 +55,7 @@ p {
 .small-text {
     font-size: 0.85rem;
 }
+
 
 .calories-info {
     display: flex;
@@ -72,9 +74,9 @@ p {
 }
 
 .calories-info span {
+    margin: -7px -2px;
     font-size: 2.4em;
     font-weight: 700;
-    margin: -7px -2px;
 }
 
 .right {
@@ -85,6 +87,6 @@ p {
     margin-left: 1em;
 }
 
-.daily-value p {
+.daily-value p:not(.no-divider) {
     border-bottom: 1px solid #888989;
 }
