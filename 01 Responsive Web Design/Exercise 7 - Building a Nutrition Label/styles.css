@@ -47,6 +47,10 @@ p {
     border: 0;
 }
 
+.medium {
+    height: 5px;
+}
+
 .small-text {
     font-size: 0.85rem;
 }
