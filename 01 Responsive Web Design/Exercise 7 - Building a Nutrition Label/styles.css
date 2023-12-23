@@ -84,3 +84,7 @@ p {
 .indent {
     margin-left: 1em;
 }
+
+.daily-value p {
+    border-bottom: 1px solid #888989;
+}
