@@ -22,3 +22,7 @@ h1 {
     text-align: center;
     margin: -4px 0;
 }
+
+p {
+    margin: 0;
+}
