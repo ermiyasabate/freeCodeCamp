@@ -13,9 +13,6 @@ body {
     max-height: 400px;
     background-color: #ffffff;
     color: #ffffff;
-    margin-top: 30px;
-    margin-bottom: 0;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 30px auto 0px;
     padding: 10px;
-}
+  }
