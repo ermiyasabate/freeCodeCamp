@@ -30,6 +30,6 @@ function goCave() {
     console.log("Going to cave.");
 }
 
-function goStore() {
-    console.log("Going to store.");
+function fightDragon() {
+    console.log("Fighting dragon");
 }
