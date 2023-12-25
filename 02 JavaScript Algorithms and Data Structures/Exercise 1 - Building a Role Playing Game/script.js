@@ -52,7 +52,7 @@ function update(location) {
 }
 
 function goTown() {
-    update();
+    update(locations);
 }
 
 function goStore() {}
