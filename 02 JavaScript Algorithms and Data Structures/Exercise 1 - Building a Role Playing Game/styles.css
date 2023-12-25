@@ -23,3 +23,10 @@ body {
     color: #0A0A23;
     padding: 5px;
 }
+
+#monsterStats {
+    border: 1px solid #0A0A23;
+    color: #ffffff;
+    padding: 5px;
+    background-color: #C70d0d;
+}
