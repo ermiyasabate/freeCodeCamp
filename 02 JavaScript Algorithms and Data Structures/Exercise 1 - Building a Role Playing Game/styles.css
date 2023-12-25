@@ -31,3 +31,7 @@ body {
     padding: 5px;
     background-color: #C70d0d;
 }
+
+.stat {
+    padding-right: 10px;
+}
