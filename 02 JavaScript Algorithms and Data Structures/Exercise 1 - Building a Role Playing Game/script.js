@@ -80,7 +80,9 @@ function buyHealth() {
     health += 10;
     goldText.innerText = gold;
     healthText.innerText = health;
-  } else {}
+  } else {
+    text.innerText = "You do not have enough gold to buy health.";
+  }
 }
 
 function buyWeapon() { }
