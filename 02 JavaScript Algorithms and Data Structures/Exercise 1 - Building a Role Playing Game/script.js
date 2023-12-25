@@ -20,7 +20,8 @@ const locations = [
   {
     "button functions": [goStore, goCave, fightDragon],
     name: "town square",
-    "button text": ["Go to store", "Go to cave", "Fight dragon"]
+    "button text": ["Go to store", "Go to cave", "Fight dragon"],
+    text: "You are in the town square. You see a sign that says \"Store\"."
   }
 ];
 
