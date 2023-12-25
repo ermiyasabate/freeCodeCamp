@@ -28,7 +28,7 @@ const weapons = [
     power: 50
   }, {
     name: "sword",
-    power:100
+    power: 100
   }
 ];
 const locations = [
@@ -102,7 +102,7 @@ function buyHealth() {
 
 function buyWeapon() {
   if (gold >= 30) {
-    
+    gold -= 30;
   }
 }
 
