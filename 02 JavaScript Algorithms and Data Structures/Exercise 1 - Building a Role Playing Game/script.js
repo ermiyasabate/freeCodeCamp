@@ -1,12 +1,12 @@
 let xp = 0;
 let health = 100;
-let gold = 150;
+let gold = 50;
 let currentWeapon = 0;
 let fighting;
 let monsterHealth;
 let inventory = ["stick"];
 
-const button1 = document.querySelector("#button1");
+const button1 = document.querySelector('#button1');
 const button2 = document.querySelector("#button2");
 const button3 = document.querySelector("#button3");
 const text = document.querySelector("#text");
@@ -17,44 +17,44 @@ const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
 const weapons = [
+  { name: 'stick', power: 5 },
+  { name: 'dagger', power: 30 },
+  { name: 'claw hammer', power: 50 },
+  { name: 'sword', power: 100 }
+];
+const monsters = [
   {
-    name: "stick",
-    power: 5
+    name: "slime",
+    level: 2,
+    health: 15
   }, {
-    name: "dagger",
-    power: 30
+    name: "fanged beast",
+    level: 8,
+    health: 60
   }, {
-    name: "claw hammer",
-    power: 50
-  }, {
-    name: "sword",
-    power: 100
+    name: "dragon",
+    level: 20,
+    health: 300
   }
 ];
 const locations = [
   {
-    "button functions": [goStore, goCave, fightDragon],
     name: "town square",
     "button text": ["Go to store", "Go to cave", "Fight dragon"],
-    text: 'You are in the town square. You see a sign that says "Store".',
-  }, {
-    "button functions": [buyHealth, buyWeapon, goTown],
+    "button functions": [goStore, goCave, fightDragon],
+    text: "You are in the town square. You see a sign that says \"Store\"."
+  },
+  {
     name: "store",
-    "button text": [
-      "Buy 10 health (10 gold)",
-      "Buy weapon (30 gold)",
-      "Go to town square",
-    ],
-    text: "You enter the store.",
-  }, {
-    "button functions": [fightSlime, fightBeast, goTown],
+    "button text": ["Buy 10 health (10 gold)", "Buy weapon (30 gold)", "Go to town square"],
+    "button functions": [buyHealth, buyWeapon, goTown],
+    text: "You enter the store."
+  },
+  {
     name: "cave",
-    "button text": [
-      "Fight Slime",
-      "Fight fanged beast",
-      "Go to town square",
-    ],
-    text: "You enter the cave. You see some monsters.",
+    "button text": ["Fight slime", "Fight fanged beast", "Go to town square"],
+    "button functions": [fightSlime, fightBeast, goTown],
+    text: "You enter the cave. You see some monsters."
   }
 ];
 
@@ -85,10 +85,6 @@ function goCave() {
   update(locations[2]);
 }
 
-function fightDragon() {
-  console.log("Fighting dragon.");
-}
-
 function buyHealth() {
   if (gold >= 10) {
     gold -= 10;
@@ -107,7 +103,6 @@ function buyWeapon() {
       currentWeapon++;
       goldText.innerText = gold;
       let newWeapon = weapons[currentWeapon].name;
-
       text.innerText = "You now have a " + newWeapon + ".";
       inventory.push(newWeapon);
       text.innerText += " In your inventory you have: " + inventory;
@@ -125,8 +120,7 @@ function sellWeapon() {
   if (inventory.length > 1) {
     gold += 15;
     goldText.innerText = gold;
-    let currentWeapon;
-    currentWeapon = inventory.shift();
+    let currentWeapon = inventory.shift();
     text.innerText = "You sold a " + currentWeapon + ".";
     text.innerText += " In your inventory you have: " + inventory;
   } else {
@@ -134,6 +128,14 @@ function sellWeapon() {
   }
 }
 
-function fightSlime() { }
+function fightSlime() {
 
-function fightBeast() { }
+}
+
+function fightBeast() {
+
+}
+
+function fightDragon() {
+  console.log("Fighting dragon.");
+}
