@@ -151,6 +151,7 @@ function fightDragon() {
 function goFight() {
   update(locations[3]);
   monsterHealth = monsters[fighting].health;
+  document.getElementById("monsterStats").style.display = "block";
 }
 
 function attack() { }
