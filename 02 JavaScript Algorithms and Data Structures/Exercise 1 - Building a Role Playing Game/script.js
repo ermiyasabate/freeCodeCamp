@@ -267,7 +267,7 @@ function pick(guess) {
     } else {
       text.innerText += "Wrong! You lose 10 health!";
       health -= 10;
-      goldText.innerText = gold;
+      healthText.innerText = health;
     }
     text.innerText += numbers[i] + "\n";
   }
