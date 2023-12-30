@@ -252,8 +252,9 @@ function easterEgg() {
   update(locations[7]);
 }
 
-function pick(guess) { 
+function pick(guess) {
   let numbers = [];
+  while (numbers.length < 10) { }
 }
 
 function pickTwo() {
