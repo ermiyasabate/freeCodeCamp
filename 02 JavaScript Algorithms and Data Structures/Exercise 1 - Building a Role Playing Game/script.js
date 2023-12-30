@@ -1,6 +1,6 @@
 let xp = 0;
 let health = 100;
-let gold = 50;
+let gold = 150;
 let currentWeapon = 0;
 let fighting;
 let monsterHealth;
@@ -40,54 +40,54 @@ const monsters = [
   }
 ]
 const locations = [
-  {
-    name: "town square",
-    "button text": ["Go to store", "Go to cave", "Fight dragon"],
-    "button functions": [goStore, goCave, fightDragon],
-    text: "You are in the town square. You see a sign that says \"Store\"."
-  },
-  {
-    name: "store",
-    "button text": ["Buy 10 health (10 gold)", "Buy weapon (30 gold)", "Go to town square"],
-    "button functions": [buyHealth, buyWeapon, goTown],
-    text: "You enter the store."
-  },
-  {
-    name: "cave",
-    "button text": ["Fight slime", "Fight fanged beast", "Go to town square"],
-    "button functions": [fightSlime, fightBeast, goTown],
-    text: "You enter the cave. You see some monsters."
-  },
-  {
-    name: "fight",
-    "button text": ["Attack", "Dodge", "Run"],
-    "button functions": [attack, dodge, goTown],
-    text: "You are fighting a monster."
-  },
-  {
-    name: "kill monster",
-    "button text": ["Go to town square", "Go to town square", "Go to town square"],
-    "button functions": [goTown, goTown, goTown],
-    text: 'The monster screams "Arg!" as it dies. You gain experience points and find gold.'
-  },
-  {
-    name: "lose",
-    "button text": ["REPLAY?", "REPLAY?", "REPLAY?"],
-    "button functions": [restart, restart, restart],
-    text: "You die. ☠️"
-  },
-  {
-    name: "win",
-    "button text": ["REPLAY?", "REPLAY?", "REPLAY?"],
-    "button functions": [restart, restart, restart],
-    text: "You defeat the dragon! YOU WIN THE GAME! 🎉"
-  },
-  {
-    name: "easter egg",
-    "button text": ["2", "8", "Go to town square?"],
-    "button functions": [pickTwo, pickEight, goTown],
-    text: "You find a secret game. Pick a number above. Ten numbers will be randomly chosen between 0 and 10. If the number you choose matches one of the random numbers, you win!"
-  }
+    {
+        name: "town square",
+        "button text": ["Go to store", "Go to cave", "Fight dragon"],
+        "button functions": [goStore, goCave, fightDragon],
+        text: "You are in the town square. You see a sign that says \"Store\"."
+    },
+    {
+        name: "store",
+        "button text": ["Buy 10 health (10 gold)", "Buy weapon (30 gold)", "Go to town square"],
+        "button functions": [buyHealth, buyWeapon, goTown],
+        text: "You enter the store."
+    },
+    {
+        name: "cave",
+        "button text": ["Fight slime", "Fight fanged beast", "Go to town square"],
+        "button functions": [fightSlime, fightBeast, goTown],
+        text: "You enter the cave. You see some monsters."
+    },
+    {
+        name: "fight",
+        "button text": ["Attack", "Dodge", "Run"],
+        "button functions": [attack, dodge, goTown],
+        text: "You are fighting a monster."
+    },
+    {
+        name: "kill monster",
+        "button text": ["Go to town square", "Go to town square", "Go to town square"],
+        "button functions": [goTown, goTown, easterEgg],
+        text: 'The monster screams "Arg!" as it dies. You gain experience points and find gold.'
+    },
+    {
+        name: "lose",
+        "button text": ["REPLAY?", "REPLAY?", "REPLAY?"],
+        "button functions": [restart, restart, restart],
+        text: "You die. ☠️"
+    },
+    { 
+        name: "win", 
+        "button text": ["REPLAY?", "REPLAY?", "REPLAY?"], 
+        "button functions": [restart, restart, restart], 
+        text: "You defeat the dragon! YOU WIN THE GAME! 🎉" 
+    },
+    {
+        name: "easter egg",
+        "button text": ["2", "8", "Go to town square?"],
+        "button functions": [pickTwo, pickEight, goTown],
+        text: "You find a secret game. Pick a number above. Ten numbers will be randomly chosen between 0 and 10. If the number you choose matches one of the random numbers, you win!"
+    }
 ];
 
 // initialize buttons
@@ -189,7 +189,7 @@ function attack() {
   text.innerText += " You attack it with your " + weapons[currentWeapon].name + ".";
   health -= getMonsterAttackValue(monsters[fighting].level);
   if (isMonsterHit()) {
-    monsterHealth -= weapons[currentWeapon].power + Math.floor(Math.random() * xp) + 1;
+    monsterHealth -= weapons[currentWeapon].power + Math.floor(Math.random() * xp) + 1;    
   } else {
     text.innerText += " You miss.";
   }
@@ -252,34 +252,33 @@ function easterEgg() {
   update(locations[7]);
 }
 
-function pick(guess) {
-  let numbers = [];
-  while (numbers.length < 10) {
-    numbers.push(Math.floor(Math.random() * 11));
-  }
-  text.innerText = "You picked " + guess + ". Here are the random numbers:\n";
-
-  for (let i = 1; i < 10; i++) {
-    if (numbers.indexOf(guess) !== -1) {
-      text.innerText += "Right! You win 20 gold!";
-      gold += 20;
-      goldText.innerText = gold;
-    } else {
-      text.innerText += "Wrong! You lose 10 health!";
-      health -= 10;
-      healthText.innerText = health;
-      if(health <= 0) {
-        lose();
-      }
-    }
-    text.innerText += numbers[i] + "\n";
-  }
-}
-
 function pickTwo() {
   pick(2);
 }
 
 function pickEight() {
   pick(8);
+}
+
+function pick(guess) {
+  let numbers = [];
+  while (numbers.length < 10) {
+    numbers.push(Math.floor(Math.random() * 11));
+  }
+  text.innerText = "You picked " + guess + ". Here are the random numbers:\n";
+  for (let i = 0; i < 10; i++) {
+    text.innerText += numbers[i] + "\n";
+  }
+  if (numbers.indexOf(guess) !== -1) {
+    text.innerText += "Right! You win 20 gold!";
+    gold += 20;
+    goldText.innerText = gold;
+  } else {
+    text.innerText += "Wrong! You lose 10 health!";
+    health -= 10;
+    healthText.innerText = health;
+    if (health <= 0) {
+      lose();
+    }
+  }
 }
