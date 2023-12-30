@@ -60,6 +60,11 @@ const locations = [
     "button text": ["Attack", "Dodge", "Run"],
     "button functions": [attack, dodge, goTown],
     text: "You are fighting a monster."
+  }, {
+    name: "kill monster",
+    "button text": ["Go to town square", "Go to town square", "Go to town square"],
+    "button functions": [goTown , goTown , goTown],
+    text: "The monster screams Arg! as it dies. You gain experience points and find gold."
   }
 ];
 
@@ -176,10 +181,11 @@ function dodge() {
 }
 
 function defeatMonster() {
-  gold += Math.floor(monsters[fighting].level * 6.7); 
+  gold += Math.floor(monsters[fighting].level * 6.7);
   xp += monsters[fighting].level;
   goldText.innerText = gold;
   xpText.innerText = xp;
+  update(locations[4]);
 }
 
 function lose() { }
