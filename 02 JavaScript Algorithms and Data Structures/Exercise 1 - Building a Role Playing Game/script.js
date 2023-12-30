@@ -1,6 +1,6 @@
 let xp = 0;
 let health = 100;
-let gold = 50;
+let gold = 150;
 let currentWeapon = 0;
 let fighting;
 let monsterHealth;
@@ -158,5 +158,6 @@ function goFight() {
 
 function attack() {
   text.innerText = "The " + monsters[fighting].name + " attacks.";
+  text.innerText += " You attack it with your " + weapons[currentWeapon].name + ".";
 }
 function dodge() { }
