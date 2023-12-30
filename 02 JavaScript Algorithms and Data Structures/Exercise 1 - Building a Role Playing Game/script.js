@@ -1,6 +1,6 @@
 let xp = 0;
 let health = 100;
-let gold = 150;
+let gold = 50;
 let currentWeapon = 0;
 let fighting;
 let monsterHealth;
@@ -27,16 +27,18 @@ const monsters = [
     name: "slime",
     level: 2,
     health: 15
-  }, {
+  },
+  {
     name: "fanged beast",
     level: 8,
     health: 60
-  }, {
+  },
+  {
     name: "dragon",
     level: 20,
     health: 300
   }
-];
+]
 const locations = [
   {
     name: "town square",
@@ -55,16 +57,24 @@ const locations = [
     "button text": ["Fight slime", "Fight fanged beast", "Go to town square"],
     "button functions": [fightSlime, fightBeast, goTown],
     text: "You enter the cave. You see some monsters."
-  }, {
+  },
+  {
     name: "fight",
     "button text": ["Attack", "Dodge", "Run"],
     "button functions": [attack, dodge, goTown],
     text: "You are fighting a monster."
-  }, {
+  },
+  {
     name: "kill monster",
     "button text": ["Go to town square", "Go to town square", "Go to town square"],
     "button functions": [goTown, goTown, goTown],
     text: 'The monster screams "Arg!" as it dies. You gain experience points and find gold.'
+  },
+  {
+    name: "lose",
+    "button text": ["REPLAY?", "REPLAY?", "REPLAY?"],
+    "button functions": [restart, restart, restart],
+    text: "You die. ☠️"
   }
 ];
 
@@ -166,17 +176,16 @@ function attack() {
   text.innerText = "The " + monsters[fighting].name + " attacks.";
   text.innerText += " You attack it with your " + weapons[currentWeapon].name + ".";
   health -= monsters[fighting].level;
-  monsterHealth -= weapons[currentWeapon].power;
   monsterHealth -= weapons[currentWeapon].power + Math.floor(Math.random() * xp) + 1;
   healthText.innerText = health;
   monsterHealthText.innerText = monsterHealth;
-
   if (health <= 0) {
     lose();
   } else if (monsterHealth <= 0) {
     defeatMonster();
   }
 }
+
 function dodge() {
   text.innerText = "You dodge the attack from the " + monsters[fighting].name;
 }
@@ -190,7 +199,7 @@ function defeatMonster() {
 }
 
 function lose() {
-  update(locations[6]);
+  update(locations[5]);
 }
 
 function restart() {
@@ -199,10 +208,8 @@ function restart() {
   gold = 50;
   currentWeapon = 0;
   inventory = ["stick"];
-
   goldText.innerText = gold;
   healthText.innerText = health;
   xpText.innerText = xp;
-
   goTown();
 }
