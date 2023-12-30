@@ -232,3 +232,7 @@ function restart() {
   xpText.innerText = xp;
   goTown();
 }
+
+function isMonsterHit() {
+  return Math.random() > .2;
+}
