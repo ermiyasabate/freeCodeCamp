@@ -81,6 +81,12 @@ const locations = [
     "button text": ["REPLAY?", "REPLAY?", "REPLAY?"],
     "button functions": [restart, restart, restart],
     text: "You defeat the dragon! YOU WIN THE GAME! 🎉"
+  },
+  {
+    name: "easter egg",
+    "button text": ["2", "8", "Go to town square?"],
+    "button functions": [pickTwo, pickEight, goTown],
+    text: "You find a secret game. Pick a number above. Ten numbers will be randomly chosen between 0 and 10. If the number you choose matches one of the random numbers, you win!"
   }
 ];
 
@@ -194,7 +200,7 @@ function attack() {
   } else if (monsterHealth <= 0) {
     fighting === 2 ? winGame() : defeatMonster();
   }
-  if (Math.random() <= .1 && inventory.length !==1) {
+  if (Math.random() <= .1 && inventory.length !== 1) {
     text.innerText += " Your " + inventory.pop() + " breaks.";
     currentWeapon--;
   }
@@ -246,7 +252,7 @@ function easterEgg() {
   update(locations[7]);
 }
 
-function pick (guess) {}
+function pick(guess) { }
 
 function pickTwo() {
   pick(2);
