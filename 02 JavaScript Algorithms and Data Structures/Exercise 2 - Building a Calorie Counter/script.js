@@ -12,6 +12,6 @@ function cleanInputString(str) {
     const cleanStrArray = [];
 
     function cleanInputString(str) {
-        const regex = /\+-/;
+        const regex = /\+-\s/;
     }
 }
