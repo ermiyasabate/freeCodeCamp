@@ -5,4 +5,5 @@ JavaScript is a powerful scripting language that we can use to make web pages in
 In this practice project, we'll learn fundamental programming concepts in JavaScript by coding your own Role Playing Game. We'll learn how to work with arrays, strings, objects, functions, loops, if/else statements, and more.
 
 ## Final Output
+
 ![Alt text](./final%20output.PNG "Final Output")
