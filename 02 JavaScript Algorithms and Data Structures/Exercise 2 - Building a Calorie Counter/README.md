@@ -6,4 +6,4 @@ In this practice project, we'll learn basic regular expressions, template litera
 
 ## Final Output
 
-![Alt text](./final.PNG "Final Output")
+![Alt text](./final.png "Final Output")
