@@ -18,5 +18,5 @@ function cleanInputString(str) {
 }
 
 function isInvalidInput(str) {
-    const regex = /e/;
+    const regex = /e/i;
 }
