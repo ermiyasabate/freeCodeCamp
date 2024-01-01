@@ -23,5 +23,6 @@ function isInvalidInput(str) {
 }
 
 function addEntry() {
-
+    const entryDropdown = document.getElementById('entryDropdown');
+    const targetId = '#' + entryDropdown.value;
 }
