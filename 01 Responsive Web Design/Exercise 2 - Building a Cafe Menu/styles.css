@@ -2,6 +2,12 @@ body {
     background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
 }
 
+h1,
+h2,
+p {
+    text-align: center;
+}
+
 .menu {
     background-color: burlywood;
     width: 80%;
@@ -9,8 +15,6 @@ body {
     margin-right: auto;
 }
 
-h1,
-h2,
-p {
-    text-align: center;
+.flavor {
+    text-align: left;
 }
