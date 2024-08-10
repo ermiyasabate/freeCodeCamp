@@ -37,6 +37,7 @@ h2 {
 hr {
     height: 3px;
     background-color: brown;
+    border-color: brown;
 }
 .flavor, .dessert {
     text-align: left;
