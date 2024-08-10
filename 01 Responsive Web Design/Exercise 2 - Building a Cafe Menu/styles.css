@@ -14,7 +14,8 @@ p {
     text-align: center;
 }
 
-h1, h2 {
+h1,
+h2 {
     font-family: Impact, serif;
 }
 
@@ -41,7 +42,8 @@ hr {
     border-color: brown;
 }
 
-.flavor, .dessert {
+.flavor,
+.dessert {
     text-align: left;
     width: 75%;
 }
@@ -69,4 +71,8 @@ footer {
 
 a {
     color: black;
+}
+
+a:visited {
+    color: grey;
 }
