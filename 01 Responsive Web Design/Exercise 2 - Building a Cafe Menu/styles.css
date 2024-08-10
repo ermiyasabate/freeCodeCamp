@@ -40,6 +40,7 @@ hr {
     background-color: brown;
     border-color: brown;
 }
+
 .flavor, .dessert {
     text-align: left;
     width: 75%;
@@ -52,4 +53,6 @@ hr {
 
 .item p {
     display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
