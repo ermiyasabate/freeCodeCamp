@@ -23,7 +23,7 @@ h1 {
     width: 110px;
     height: 25px;
     /* opacity: 0.5; */
-    border-left: 10px solid black;
+    border-left: 10px double black;
 }
 
 .cap, .sleeve {
