@@ -25,6 +25,10 @@ h1 {
     /* opacity: 0.5; */
 }
 
+.cap, .sleeve {
+    display: inline-block;
+}
+
 .red {
     background: linear-gradient(rgb(122, 74, 14), rgb(245, 62, 113), rgb(162, 27, 27));
 }
