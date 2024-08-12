@@ -24,6 +24,7 @@ h1 {
     height: 25px;
     /* opacity: 0.5; */
     border-left-width: 10px;
+    border-left-style: solid;
 }
 
 .cap, .sleeve {
