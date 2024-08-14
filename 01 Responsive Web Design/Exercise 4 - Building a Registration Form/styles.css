@@ -60,4 +60,6 @@ input[type="submit"] {
     text-align: center;
     height: 2em;
     font-size: 1.1rem;
+    background-color: #3b3b4f;
+    border-color: white;
 }
