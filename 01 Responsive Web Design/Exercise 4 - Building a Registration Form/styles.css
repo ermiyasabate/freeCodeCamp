@@ -8,14 +8,14 @@ body {
     font-size: 16px;
 }
 
-label {
-    display: block;
-    margin: 0.5rem 0;
-}
-
 h1, p {
     margin: 1em auto;
     text-align: center;
+}
+
+label {
+    display: block;
+    margin: 0.5rem 0;
 }
 
 form {
@@ -29,4 +29,13 @@ fieldset {
     border: none;
     padding:  2rem 0;
     border-bottom: 3px solid #3b3b4f;
+}
+
+fieldset:last-of-type {
+    border-bottom: none;
+}
+
+input, textarea, select {
+    width: 100%;
+    margin: 10px 0 0 0 ;
 }
