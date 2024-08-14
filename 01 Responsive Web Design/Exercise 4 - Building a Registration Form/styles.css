@@ -8,7 +8,8 @@ body {
     font-size: 16px;
 }
 
-h1, p {
+h1,
+p {
     margin: 1em auto;
     text-align: center;
 }
@@ -28,7 +29,7 @@ form {
 
 fieldset {
     border: none;
-    padding:  2rem 0;
+    padding: 2rem 0;
     border-bottom: 3px solid #3b3b4f;
 }
 
@@ -36,13 +37,16 @@ fieldset:last-of-type {
     border-bottom: none;
 }
 
-input, textarea, select {
+input,
+textarea,
+select {
     width: 100%;
-    margin: 10px 0 0 0 ;
+    margin: 10px 0 0 0;
     min-height: 2em;
 }
 
-input, textarea {
+input,
+textarea {
     background-color: #0a0a23;
     border: 1px solid #0a0a23;
     color: #ffffff;
@@ -67,4 +71,8 @@ input[type="submit"] {
 
 input[type="file"] {
     padding: 1px 2px;
+}
+
+a {
+    color: #dfdfe2;
 }
