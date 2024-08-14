@@ -27,10 +27,10 @@
                 Business</label>
         </fieldset>
         <fieldset>
-            <label for=""><input type="file"> Upload a profile picture:</label>
-            <label for=""><input type="number" min="13" max="120"> Input your age (years): </label>
-            <label for="">How did you hear about us?
-                <select>
+            <label for="profile-picture"><input type="file" id="profile-picture"> Upload a profile picture:</label>
+            <label for="age"><input type="number" id="age" min="13" max="120"> Input your age (years): </label>
+            <label for="referrer">How did you hear about us?
+                <select id="referrer">
                     <option value="">(select one)</option>
                     <option value="1">freeCodeCamp News</option>
                     <option value="2">freeCodeCamp YouTube Channel</option>
@@ -38,7 +38,7 @@
                     <option value="4">Other</option>
                 </select>
             </label>
-            <label for="">Provide a bio: <textarea></textarea></label>
+            <label for="bio">Provide a bio: <textarea id="bio"></textarea></label>
         </fieldset>
         <label for="terms-and-conditions"><input type="checkbox" id="terms-and-conditions" required>I accept the <a
                 href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a></label>
