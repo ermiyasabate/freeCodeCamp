@@ -2,4 +2,4 @@
 * Your test output will go here
 */
 
-let character;
+let character = "Hello";
