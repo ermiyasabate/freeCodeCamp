@@ -1,2 +1,2 @@
 let character = 'Hello';
-let money = 8;
+let count = 8;
