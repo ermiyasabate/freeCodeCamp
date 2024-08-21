@@ -6,10 +6,10 @@ let rows = ["Naomi", "Quincy", "CamperChan"];
 
 // rows[rows.length - 1] = 10
 
-let cities = ["London", "New York", "Mumbai"];
-console.log(cities);
+// let cities = ["London", "New York", "Mumbai"];
+// console.log(cities);
 
-cities[cities.length - 1] = "Mexico City";
-console.log(cities);
+// cities[cities.length - 1] = "Mexico City";
+// console.log(cities);
 
 console.log(rows)
