@@ -18,7 +18,3 @@ let popped = rows.pop();
 console.log(popped);
 
 console.log(rows)
-
-
-
-
