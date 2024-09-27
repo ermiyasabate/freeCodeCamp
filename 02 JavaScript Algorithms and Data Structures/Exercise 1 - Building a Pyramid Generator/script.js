@@ -5,5 +5,6 @@ character = 'World';
 console.log(character);
 
 let secondCharacter;
-secondCharacter = 'Test';
+// secondCharacter = 'Test';
+secondCharacter = character;
 console.log(secondCharacter);
