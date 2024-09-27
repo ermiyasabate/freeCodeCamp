@@ -1,9 +1,9 @@
 let character = 'Hello';
 console.log(character);
 
-character = 'World'
+character = 'World';
 console.log(character);
 
 let secondCharacter;
-secondCharacter = 'Test'
+secondCharacter = 'Test';
 console.log(secondCharacter);
