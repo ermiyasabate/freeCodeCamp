@@ -104,3 +104,14 @@ body {
     height: 20px;
     background-color: #fff;
 }
+
+.cat-right-inner-eye {
+    /* position: absolute; */
+    /* top: 8px; */
+    /* left: 2px; */
+    /* border-radius: 60%; */
+    /* transform: rotate(10deg); */
+    width: 10px;
+    height: 20px;
+    background-color: #fff;
+}
