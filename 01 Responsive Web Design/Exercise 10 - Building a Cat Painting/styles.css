@@ -84,9 +84,9 @@ body {
 }
 
 .cat-right-eye {
-    /* position: absolute; */
-    /* top: 54px; */
-    /* left: 39px; */
+    position: absolute;
+    top: 54px;
+    left: 134px;
     /* border-radius: 60%; */
     /* transform: rotate(25deg); */
     width: 30px;
