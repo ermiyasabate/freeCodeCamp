@@ -47,6 +47,9 @@ body {
 }
 
 .cat-left-inner-ear {
+    position: absolute;
+    top: 22px;
+    left: -20px;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
     border-bottom: 40px solid #3b3b4f;
