@@ -73,6 +73,9 @@ body {
 }
 
 .cat-left-eye {
+    position: absolute;
+    top: 54px;
+    left: 39px;
     width: 30px;
     height: 40px;
     background-color: #000;
