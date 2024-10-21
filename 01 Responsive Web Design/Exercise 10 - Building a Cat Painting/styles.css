@@ -174,5 +174,12 @@ body {
     position: absolute;
     top: 127px;
     left: 52px;
-    /* transform: rotate(10deg); */
+    transform: rotate(3deg);
+}
+
+.cat-whisker-left-bottom {
+    position: absolute;
+    top: 134px;
+    left: 52px;
+    transform: rotate(3deg);
 }
