@@ -162,3 +162,9 @@ body {
     height: 1px;
     background-color: #000;
 }
+
+.cat-whisker-left-top {
+    position: absolute;
+    top: 120px;
+    left: 52px;
+}
