@@ -195,5 +195,5 @@ body {
     position: absolute;
     top: 127px;
     left: 109px;
-    /* transform: rotate(3deg); */
+    transform: rotate(-3deg);
 }
