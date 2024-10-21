@@ -93,3 +93,9 @@ body {
     height: 40px;
     background-color: #000;
 }
+
+.cat-left-inner-eye {
+    width: 10px;
+    height: 20px;
+    background-color: #fff;
+}
