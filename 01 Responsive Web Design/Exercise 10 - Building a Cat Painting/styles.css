@@ -24,6 +24,8 @@ body {
     position: absolute;
     top: -26px;
     left: -31px;
+    border-top-left-radius: 90px;
+    border-top-right-radius: 10px;
     border-left: 35px solid transparent;
     border-right: 35px solid transparent;
     border-top: 35px solid transparent;
