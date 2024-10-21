@@ -20,11 +20,9 @@ body {
     border-radius: 46%;
 }
 
-.cat-right-ear {
-    width: 0;
-    height: 0;
+.cat-left-ear {
     border-left: 35px solid transparent;
     border-right: 35px solid transparent;
     border-top: 35px solid transparent;
-    border-bottom: 35px solid red;
+    border-bottom: 70px solid #5e5e5e;
 }
