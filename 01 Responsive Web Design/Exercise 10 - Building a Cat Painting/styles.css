@@ -141,4 +141,5 @@ body {
     position: absolute;
     top: 88px;
     left: 74px;
+    transform: rotate(170deg);
 }
