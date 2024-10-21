@@ -7,8 +7,12 @@ body {
 }
 
 .cat-head {
-    position: sticky;
+    position: absolute;
     top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
     background: linear-gradient(#5e5e5e 85%, #45454f 100%);
     width: 205px;
     height: 180px;
