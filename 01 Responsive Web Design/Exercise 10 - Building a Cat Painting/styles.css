@@ -21,11 +21,10 @@ body {
 }
 
 .cat-right-ear {
-    width: 100px;
-    height: 100px;
-    background-color: white;
-    border-left: 35px solid blue;
-    border-right: 35px solid blue;
-    border-top: 35px solid red;
+    width: 0;
+    height: 0;
+    border-left: 35px solid transparent;
+    border-right: 35px solid transparent;
+    border-top: 35px solid transparent;
     border-bottom: 35px solid red;
 }
