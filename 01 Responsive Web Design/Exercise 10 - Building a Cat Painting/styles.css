@@ -19,3 +19,13 @@ body {
     border: 1px solid #000;
     border-radius: 46%;
 }
+
+.cat-right-ear {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-left: 35px solid blue;
+    border-right: 35px solid blue;
+    border-top: 35px solid red;
+    border-bottom: 35px solid red;
+}
