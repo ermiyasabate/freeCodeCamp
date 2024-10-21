@@ -21,6 +21,9 @@ body {
 }
 
 .cat-left-ear {
+    position: absolute;
+    top: -26px;
+    left: -31px;
     border-left: 35px solid transparent;
     border-right: 35px solid transparent;
     border-top: 35px solid transparent;
